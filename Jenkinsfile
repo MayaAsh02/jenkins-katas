@@ -5,8 +5,7 @@ pipeline {
       parallel {
         stage('say hello world') {
           steps {
-            sh '''echo "hello world"
-systemctl status docker'''
+            sh 'echo "hello world"'
           }
         }
 
