@@ -1,10 +1,5 @@
 pipeline {
-  agent {
-    node {
-      label 'gradle:6-jdk11'
-    }
-
-  }
+  agent any
   stages {
     stage('Parallel execution') {
       parallel {
@@ -16,8 +11,8 @@ pipeline {
 
         stage('build-app') {
           agent {
-            node {
-              label 'gradle:6-jdk11'
+            docker {
+              image 'gradle:6-jdk11'
             }
 
           }
