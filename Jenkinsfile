@@ -10,12 +10,7 @@ pipeline {
         }
 
         stage('build-app') {
-          agent {
-            docker {
-              image 'gradle:jdk11-alpine'
-            }
-
-          }
+          agent any
           steps {
             sh 'ci/build-app.sh'
           }
