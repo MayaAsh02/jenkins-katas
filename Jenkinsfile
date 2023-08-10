@@ -5,7 +5,7 @@ pipeline {
       parallel {
         stage('say hello world') {
           steps {
-            sh 'sh \'\'\'echo "hello world"\'\'\''
+            sh 'echo "hello world"'
           }
         }
 
@@ -17,7 +17,7 @@ pipeline {
 
           }
           steps {
-            sh 'sh \'ci/build-app.sh\''
+            sh 'ci/build-app.sh'
           }
         }
 
